@@ -1,12 +1,36 @@
-# Global Airport Network Resilience Analysis
+# Global Airport Network Analysis
 
-This project analyses the structure, connectivity, community organisation, and resilience of the global airport network using graph theory and network analysis.
+![Project Banner](Reports/figures/global_network.png)
 
-The project constructs a directed airport-route network from the OpenFlights airport and route datasets and investigates how the network responds to random and targeted airport removals.
+## Project Overview
+
+The global air transportation system is one of the largest and most complex infrastructure networks in the world. Understanding its structural organization and resilience is essential for transportation planning, infrastructure protection, and disruption management.
+
+This project models the worldwide airport transportation system as a directed graph using the OpenFlights dataset, where airports are represented as nodes and scheduled flight routes as directed edges. Graph theory and network science techniques are then applied to investigate the network's structural properties, identify globally important hub airports, detect community structure, visualize geographical connectivity, and evaluate network resilience under different airport failure scenarios.
+
+The project is implemented entirely in Python using NetworkX, Pandas, NumPy, and Matplotlib, following a modular workflow that progresses from data exploration and graph construction to advanced network analysis.
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Research Question](#research-question)
+- [Objectives](#objectives)
+- [Dataset](#dataset)
+- [Methodology](#methodology)
+- [Key Results](#key-results)
+- [Technologies Used](#technologies-used)
+- [How to Run](#how-to-run)
+- [Notebook Workflow](#notebook-workflow)
+- [Resilience Analysis](#resilience-analysis)
+- [Community Detection](#community-detection)
+- [Project Structure](#project-structure)
+- [Future Work](#future-work)
+- [Author](#author)
 
 ## Research Question
 
-**How resilient is the global airport network to airport failures, and which airports are most critical for maintaining network connectivity?**
+**How is the global airport transportation network structurally organized, which airports are most critical for maintaining worldwide connectivity, and how resilient is the network to different airport failure scenarios?**
+
 
 ## Objectives
 
@@ -28,20 +52,97 @@ Run the notebooks in the following order from the `Notebooks` folder:
 5. `05_Geographic_Visualization.ipynb` — geographic distribution of airports and major hubs.
 6. `06_Communities_and_Resilience.ipynb` — community detection, random failures, targeted hub failures, and resilience analysis.
 
-## Methods
+## Methodology
 
-The analysis uses:
+The project follows a structured graph-theoretic workflow, progressing from data preprocessing to advanced network analysis.
 
-- Graph construction using NetworkX
-- Degree and degree centrality
-- PageRank
-- Betweenness centrality
-- Louvain community detection
-- Random airport failure simulations
-- Degree-targeted airport removal
-- Betweenness-targeted airport removal
-- Largest connected component analysis
-- Geographic visualisation
+The principal methods used include:
+
+* **Graph Construction** – Building a directed airport-route network using NetworkX.
+* **Network Statistics** – Computing global network metrics including density, reciprocity, connected components, and degree distribution.
+* **Centrality Analysis** – Identifying structurally important airports using Degree, PageRank, and Betweenness Centrality.
+* **Geographic Visualization** – Mapping airport locations and major hubs to examine the spatial organization of the network.
+* **Community Detection** – Applying the Louvain algorithm to identify densely connected airport communities.
+* **Network Resilience Analysis** – Comparing the effects of random failures, degree-targeted attacks, and betweenness-targeted attacks by measuring changes in the largest connected component.
+
+Together, these methods provide a comprehensive understanding of both the structural organization and robustness of the global airport transportation network.
+
+## Key Results
+
+The analysis reveals several important structural characteristics of the global airport transportation network:
+
+- The network contains **3,214 airports** connected by **36,907 directed flight routes**, forming one dominant connected component.
+- The airport network is **highly sparse**, with only a small fraction of all possible airport-to-airport connections existing in practice.
+- A relatively small number of airports act as global hubs, with airports such as **Frankfurt**, **Charles de Gaulle**, and **Amsterdam Schiphol** ranking among the most connected.
+- Centrality analysis demonstrates that different measures (Degree, PageRank, and Betweenness Centrality) identify different types of structurally important airports.
+- Community detection reveals geographically meaningful groups of airports, reflecting regional aviation structure.
+- Resilience analysis shows that the network is highly robust to random airport failures but significantly more vulnerable when strategically important hub airports are removed.
+
+## Sample Visualizations
+
+### Global Airport Network
+
+![Network](Reports/figures/global_network.png)
+
+### Degree Distribution
+
+![Degree](Reports/figures/degree_distribution.png)
+
+### Network Resilience
+
+![Resilience](Reports/figures/random_vs_targeted.png)
+
+## Technologies Used
+
+| Category | Tools |
+|----------|-------|
+| Programming Language | Python |
+| Data Processing | Pandas, NumPy |
+| Network Analysis | NetworkX |
+| Community Detection | python-louvain |
+| Visualization | Matplotlib |
+| Development Environment | Jupyter Notebook, VS Code |
+| Version Control | Git, GitHub |
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd global-airport-network-analysis
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### 4. Run the notebooks in the following order
+
+1. `01_Data_Exploration.ipynb`
+2. `02_Graph_Construction.ipynb`
+3. `03_Basic_Network_Analysis.ipynb`
+4. `04_Centrality_Analysis.ipynb`
+5. `05_Geographic_Visualization.ipynb`
+6. `06_Communities_and_Resilience.ipynb`
+
+## Future Work
+
+Potential extensions of this project include:
+
+- Incorporating flight frequency and passenger traffic as weighted edges.
+- Studying temporal changes in the airport network across multiple years.
+- Comparing network resilience under different disruption strategies.
+- Evaluating the impact of regional airport closures on global connectivity.
+- Applying additional graph embedding and machine learning techniques for airport importance prediction.
 
 ## Key Network Analysis
 
@@ -86,7 +187,7 @@ The resulting communities reveal strong geographic and regional structure in the
 ## Project Structure
 
 ```text
-global-airport-network-resilience/
+global-airport-network-analysis/
 │
 ├── Data/
 │   ├── airports.dat
@@ -111,3 +212,15 @@ global-airport-network-resilience/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+
+
+
+## Author
+
+**Himanshi Pandey**
+
+M.Sc. Applied Mathematics  
+National Institute of Technology Warangal
+
+This project investigates the structural organization and resilience of the global airport transportation network using graph theory and network science techniques.
