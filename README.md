@@ -92,6 +92,10 @@ The analysis reveals several important structural characteristics of the global 
 
 ![Resilience](Reports/figures/Random_vs_Targeted.png)
 
+### Top 20 hubs
+
+![Hubs](Reports/figures/top20_hubs.png)
+
 ## Technologies Used
 
 | Category | Tools |
