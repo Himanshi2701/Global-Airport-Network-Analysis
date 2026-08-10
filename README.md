@@ -90,7 +90,15 @@ The analysis reveals several important structural characteristics of the global 
 
 ### Network Resilience
 
+<<<<<<< HEAD
 ![Resilience](Reports/figures/Random_vs_Targeted.png)V
+=======
+![Resilience](Reports/figures/Random_vs_Targeted.png)
+
+### Top 20 hubs
+
+![Hubs](Reports/figures/top20_hubs.png)
+>>>>>>> 4d99ce8eabaf1675714cf64f5e45fc7a658ba19c
 
 ## Technologies Used
 
@@ -134,28 +142,6 @@ jupyter notebook
 5. `05_Geographic_Visualization.ipynb`
 6. `06_Communities_and_Resilience.ipynb`
 
-## Future Work
-
-Potential extensions of this project include:
-
-- Incorporating flight frequency and passenger traffic as weighted edges.
-- Studying temporal changes in the airport network across multiple years.
-- Comparing network resilience under different disruption strategies.
-- Evaluating the impact of regional airport closures on global connectivity.
-- Applying additional graph embedding and machine learning techniques for airport importance prediction.
-
-## Key Network Analysis
-
-The constructed network contains thousands of airports and tens of thousands of route connections.
-
-The analysis examines:
-
-- network connectivity
-- degree distribution
-- highly connected hub airports
-- centrality rankings
-- community structure
-- size of the largest connected component under airport removals
 
 ## Resilience Analysis
 
@@ -212,8 +198,16 @@ global-airport-network-analysis/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
+## Future Work
 
+Potential extensions of this project include:
 
+- Incorporating flight frequency and passenger traffic as weighted edges.
+- Studying temporal changes in the airport network across multiple years.
+- Comparing network resilience under different disruption strategies.
+- Evaluating the impact of regional airport closures on global connectivity.
+- Applying additional graph embedding and machine learning techniques for airport importance prediction.
 
 
 ## Author
