@@ -90,7 +90,7 @@ The analysis reveals several important structural characteristics of the global 
 
 ### Network Resilience
 
-![Resilience](Reports/figures/random_vs_targeted.png)
+![Resilience](Reports/figures/Random_vs_Targeted.png)V
 
 ## Technologies Used
 
