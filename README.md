@@ -98,7 +98,7 @@ The analysis reveals several important structural characteristics of the global 
 ### Top 20 hubs
 
 ![Hubs](Reports/figures/top20_hubs.png)
-4d99ce8eabaf1675714cf64f5e45fc7a658ba19c
+
 
 ## Technologies Used
 
