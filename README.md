@@ -90,15 +90,15 @@ The analysis reveals several important structural characteristics of the global 
 
 ### Network Resilience
 
-<<<<<<< HEAD
+ HEAD
 ![Resilience](Reports/figures/Random_vs_Targeted.png)V
-=======
+
 ![Resilience](Reports/figures/Random_vs_Targeted.png)
 
 ### Top 20 hubs
 
 ![Hubs](Reports/figures/top20_hubs.png)
->>>>>>> 4d99ce8eabaf1675714cf64f5e45fc7a658ba19c
+4d99ce8eabaf1675714cf64f5e45fc7a658ba19c
 
 ## Technologies Used
 
