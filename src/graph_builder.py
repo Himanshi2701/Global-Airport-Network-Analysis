@@ -87,6 +87,7 @@ def build_graph(
                 airlines=[route["airline"]],
                 stops=route["stops"],
             )
+            graph.remove_edges_from(list(nx.selfloop_edges(graph)))
     return graph
 
 
